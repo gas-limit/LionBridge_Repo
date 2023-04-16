@@ -1,0 +1,362 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+}
+
+.box {
+  position: relative;
+  background: url("https://i.ibb.co/fp2FyZz/background.png");
+}
+
+.inner-box {
+  position: absolute;
+  z-index: 5;
+  background-repeat: none;
+  background-size: cover;
+}
+
+.table1 {
+  position: absolute;
+  bottom: 310px;
+  right: 233px;
+  width: 120px;
+  height: 70px;
+
+  z-index: 1;
+}
+
+.table2 {
+  position: absolute;
+  bottom: 210px;
+  right: 233px;
+  width: 120px;
+  height: 70px;
+
+  z-index: 1;
+}
+
+.bottom-right-div {
+}
+
+.obstacle {
+  position: absolute;
+  top: 150px;
+  left: 115px;
+}
+
+.board {
+  position: absolute;
+  top: 100px;
+  left: 530px;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 6;
+  animation: fadeIn 0.5s;
+}
+
+.modal-content {
+  background-color: #fff;
+  width: 700px;
+  height: 500px;
+  border-radius: 5px;
+}
+
+.textBox {
+  position: absolute;
+  top: 400px;
+  left: 45px;
+  width: 700px;
+  height: 170px;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border: 2px solid black;
+  z-index: 6;
+}
+
+.textBoxNeko {
+  position: absolute;
+  top: 400px;
+  left: 45px;
+  width: 700px;
+  height: 170px;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border: 2px solid black;
+  z-index: 8;
+}
+
+.textSelect {
+  position: absolute;
+  top: 120px;
+  margin-left: 150px;
+  border: 1px solid black;
+  height: 30px;
+  width: 100px;
+
+  text-align: center;
+  line-height: 1.8;
+}
+
+.textSelect2 {
+  position: absolute;
+  top: 120px;
+  border: 1px solid black;
+  height: 30px;
+  width: 100px;
+  margin-left: 410px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.note {
+  position: relative;
+  border: 1px solid black;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  left: 33%;
+  padding: 10px;
+  margin: 50px;
+  margin-top: 100px;
+  background-color: yellow;
+  box-shadow: 5px 10px;
+}
+
+.swapBox {
+  border: 2px solid black;
+  width: 40%;
+  height: 200px;
+  border-radius: 5px;
+  margin: 10px;
+  animation: fadeIn 0.5s;
+}
+
+.asset {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 50px;
+  width: 220px;
+  margin-left: 2%;
+  margin-bottom: 2px;
+  padding-left: 25px;
+  text-decoration: none;
+}
+
+.swapButton {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 30px;
+  width: 243px;
+  margin-left: 2%;
+  margin-bottom: 2px;
+  margin-top: 10px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.selectAsset1 {
+  position: absolute;
+  margin-left: 150px;
+  margin-bottom: -100px;
+  margin-top: -40px;
+}
+
+.selectAsset2 {
+  position: absolute;
+  margin-left: 150px;
+  margin-bottom: -100px;
+  margin-top: 15px;
+}
+
+.neko {
+  max-width: 30px;
+  max-height: 30px;
+  position: absolute;
+  margin-bottom: 340px;
+  margin-right: 80px;
+}
+
+.worker {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  margin-bottom: 50px;
+  margin-left: -680px;
+}
+
+.nekoBig {
+  max-width: 400px;
+  max-height: 400px;
+  position: absolute;
+  margin-bottom: 100px;
+  margin-right: 80px;
+  padding-bottom: 50px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.header {
+  font-weight: bold;
+  display: flex;
+  justify-content: left;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.headerItem {
+  padding-right: 150px;
+}
+
+.pool {
+  height: 60px;
+  padding-left: 10px;
+  line-height: 4;
+}
+
+table {
+  width: 100%;
+  height: 80%;
+  border-collapse: collapse;
+}
+th,
+td {
+  border-bottom: 1px solid black;
+  padding-left: 20px;
+  text-align: left;
+}
+th {
+  font-weight: bold;
+}
+
+.tokenIcon {
+  height: 25px;
+  width: 25px;
+  margin: 2px;
+}
+
+.switchAssets {
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 40px;
+  height: 40px;
+  width: 40px;
+
+  z-index: 10;
+}
+
+.poolContent {
+  display: flex;
+  animation: fadeIn 0.5s;
+  height: 60px;
+  padding-top: 20px;
+}
+
+.tab-content {
+  display: flex;
+  justify-content: center;
+  background: white;
+  animation: fadeIn 0.5s;
+}
+
+.tab-container {
+  animation: fadeIn 0.5s;
+  padding: 20px;
+}
+
+.poolTab {
+  background: white;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  border-left: none;
+  border-bottom: none;
+}
+
+.active {
+  background-color: white;
+  border-bottom: none;
+  width: 100px;
+  height: 30px;
+}
+
+.inactive {
+  padding: 10px;
+  border: none;
+  background: none;
+  width: 100px;
+  height: 30px;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.typedOutWrapper {
+  display: inline-block;
+  margin-left: -300px;
+  margin-top: 35px;
+}
+
+.typedOut {
+  width: 0;
+  overflow: hidden;
+  border-right: solid black 5px;
+  white-space: nowrap;
+  animation: typing 1s steps(20, end) forwards,
+    blink-caret 0.75s step-end infinite;
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+.poolView {
+  padding: 15px;
+}
