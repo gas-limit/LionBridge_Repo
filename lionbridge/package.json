@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@rainbow-me/rainbowkit": "^0.12.8",
+    "ethers": "^5.7.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "wagmi": "^0.12.10"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",

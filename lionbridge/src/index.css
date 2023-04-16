@@ -10,53 +10,6 @@
   background-color: black;
 }
 
-.box {
-  position: relative;
-  background: url("https://i.ibb.co/fp2FyZz/background.png");
-}
-
-.inner-box {
-  position: absolute;
-  z-index: 5;
-  background-repeat: none;
-  background-size: cover;
-}
-
-.table1 {
-  position: absolute;
-  bottom: 310px;
-  right: 233px;
-  width: 120px;
-  height: 70px;
-
-  z-index: 1;
-}
-
-.table2 {
-  position: absolute;
-  bottom: 210px;
-  right: 233px;
-  width: 120px;
-  height: 70px;
-
-  z-index: 1;
-}
-
-.bottom-right-div {
-}
-
-.obstacle {
-  position: absolute;
-  top: 150px;
-  left: 115px;
-}
-
-.board {
-  position: absolute;
-  top: 100px;
-  left: 530px;
-}
-
 .modal {
   position: absolute;
   top: 0;
@@ -71,80 +24,13 @@
   animation: fadeIn 0.5s;
 }
 
-.modal-content {
-  background-color: #fff;
-  width: 700px;
-  height: 500px;
-  border-radius: 5px;
-}
 
-.textBox {
-  position: absolute;
-  top: 400px;
-  left: 45px;
-  width: 700px;
-  height: 170px;
-  display: flex;
-  justify-content: center;
-  background-color: white;
-  border: 2px solid black;
-  z-index: 6;
-}
 
-.textBoxNeko {
-  position: absolute;
-  top: 400px;
-  left: 45px;
-  width: 700px;
-  height: 170px;
-  display: flex;
-  justify-content: center;
-  background-color: white;
-  border: 2px solid black;
-  z-index: 8;
-}
-
-.textSelect {
-  position: absolute;
-  top: 120px;
-  margin-left: 150px;
-  border: 1px solid black;
-  height: 30px;
-  width: 100px;
-
-  text-align: center;
-  line-height: 1.8;
-}
-
-.textSelect2 {
-  position: absolute;
-  top: 120px;
-  border: 1px solid black;
-  height: 30px;
-  width: 100px;
-  margin-left: 410px;
-  text-align: center;
-  line-height: 1.8;
-}
-
-.note {
-  position: relative;
-  border: 1px solid black;
-  text-align: center;
-  width: 100px;
-  height: 100px;
-  left: 33%;
-  padding: 10px;
-  margin: 50px;
-  margin-top: 100px;
-  background-color: yellow;
-  box-shadow: 5px 10px;
-}
 
 .swapBox {
   border: 2px solid black;
   width: 40%;
-  height: 200px;
+  height: 300px;
   border-radius: 5px;
   margin: 10px;
   animation: fadeIn 0.5s;
@@ -168,7 +54,7 @@
   width: 243px;
   margin-left: 2%;
   margin-bottom: 2px;
-  margin-top: 10px;
+  margin-top: 90px;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -185,42 +71,20 @@ input[type="number"] {
 
 .selectAsset1 {
   position: absolute;
-  margin-left: 150px;
-  margin-bottom: -100px;
-  margin-top: -40px;
+  margin-left: 20px;
+  margin-bottom: 50px;
+  margin-top: 65px;
+ 
 }
 
 .selectAsset2 {
   position: absolute;
-  margin-left: 150px;
+  margin-left: 170px;
   margin-bottom: -100px;
-  margin-top: 15px;
+  margin-top: 65px;
 }
 
-.neko {
-  max-width: 30px;
-  max-height: 30px;
-  position: absolute;
-  margin-bottom: 340px;
-  margin-right: 80px;
-}
 
-.worker {
-  width: 70px;
-  height: 70px;
-  position: absolute;
-  margin-bottom: 50px;
-  margin-left: -680px;
-}
-
-.nekoBig {
-  max-width: 400px;
-  max-height: 400px;
-  position: absolute;
-  margin-bottom: 100px;
-  margin-right: 80px;
-  padding-bottom: 50px;
-}
 
 @keyframes fadeIn {
   0% {
@@ -230,6 +94,8 @@ input[type="number"] {
     opacity: 1;
   }
 }
+
+
 
 .header {
   font-weight: bold;
@@ -272,8 +138,8 @@ th {
 
 .switchAssets {
   position: absolute;
-  margin-left: 100px;
-  margin-top: 40px;
+  margin-left: 110px;
+  margin-top: 70px;
   height: 40px;
   width: 40px;
 
@@ -359,4 +225,36 @@ th {
 
 .poolView {
   padding: 15px;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.lionBackground{
+  background: url("https://marketplace.canva.com/EAFHm4JWsu8/1/0/1600w/canva-pink-landscape-desktop-wallpaper-HGxdJA_xIx0.jpg");
+  z-index: 20;
 }

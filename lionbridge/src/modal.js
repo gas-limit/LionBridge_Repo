@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import "./index.css";
 
 export function DAIUSDCSwap() {
-  const [slot1Symbol, setSlot1Symbol] = useState("DAI");
-  const [slot2Symbol, setSlot2Symbol] = useState("USDC");
+  const [slot1Symbol, setSlot1Symbol] = useState("Arbitrum");
+  const [slot2Symbol, setSlot2Symbol] = useState("Avalanche");
   const [slot2Icon, setSlot2Icon] = useState(
-    "https://cryptologos.cc/logos/multi-collateral-dai-dai-logo.png"
+    "https://www.tally.xyz/_next/image?url=https%3A%2F%2Fstatic.tally.xyz%2F51cc280c-b992-4f5c-8190-d5aabd1f82c9_original.png&w=384&q=75"
   );
   const [slot1Icon, setSlot1Icon] = useState(
-    "https://cryptologos.cc/logos/usd-coin-usdc-logo.png"
+    "https://upload.wikimedia.org/wikipedia/en/0/03/Avalanche_logo_without_text.png"
   );
 
   function switchAssets() {
@@ -19,6 +19,8 @@ export function DAIUSDCSwap() {
     setSlot1Symbol(slot2Symbol);
     setSlot2Symbol(tempAsset);
   }
+
+
 
   return (
     <>
@@ -31,14 +33,15 @@ export function DAIUSDCSwap() {
       <div className="swapBox">
         <div style={{ marginTop: 8, marginLeft: 10, marginBottom: 10 }}>
           {" "}
-          Swap{" "}
+          <b>
+          Bridge Assets </b>{" "}
         </div>
         <img
-          src="https://i.ibb.co/B431MDW/sort.png"
+          src="https://i.ibb.co/qj83t99/swap.png"
           className="switchAssets"
           onClick={() => switchAssets()}
         />
-        <input className="asset" type="number" />
+        
         <div className="selectAsset1">
           {slot1Symbol}
           <img className="tokenIcon" src={slot2Icon} />
@@ -48,9 +51,14 @@ export function DAIUSDCSwap() {
           <img className="tokenIcon" src={slot1Icon} />
         </div>
 
-        <input className="asset" type="number" />
 
-        <button className="swapButton"> Swap </button>
+
+        <input placeholder="amount" className="asset" type="number" />
+<Dropdown/>
+        <button className="swapButton"> Bridge </button>
+        <div style={{margin:10}}>
+        ⚠️ Make sure there is enough liquidity in the pool to bridge your assets.
+        </div>
       </div>
     </>
   );
@@ -68,29 +76,32 @@ export function DAIUSDCDeposit() {
       <div className="swapBox">
         <div style={{ marginTop: 8, marginLeft: 10, marginBottom: 10 }}>
           {" "}
-          Deposit{" "}
+          <b>
+          Add Liquidity</b>{" "}
         </div>
 
-        <input className="asset" type="number" />
-        <div className="selectAsset1">
-          DAI
-          <img
-            className="tokenIcon"
-            src="https://cryptologos.cc/logos/multi-collateral-dai-dai-logo.png"
-          />
-        </div>
-        <div className="selectAsset2">
-          USDC
-          <img
-            className="tokenIcon"
-            src="https://cryptologos.cc/logos/usd-coin-usdc-logo.png"
-          />
-        </div>
 
-        <input className="asset" type="number" />
 
-        <button className="swapButton"> Deposit </button>
+        <input placeholder="amount" className="asset" type="number" />
+
+      
+        <Dropdown/>
+
+<div style={{margin:10}}>
+    Network: <b>Arbitrum</b>
+    <img className="tokenIcon" src="https://www.tally.xyz/_next/image?url=https%3A%2F%2Fstatic.tally.xyz%2F51cc280c-b992-4f5c-8190-d5aabd1f82c9_original.png&w=384&q=75" />
+
+</div>
+      
+
+        <button style={{marginTop:10}}className="swapButton"> Deposit </button>
+        <div style={{margin:20}}>
+        ✨ Earn 0.02% of all trades on this pair proportional to your share of the pool.
+        </div>   
       </div>
+
+
+
     </>
   );
 }
@@ -101,13 +112,19 @@ export function DAIUSDCWithdraw() {
       <div className="swapBox">
         <div style={{ marginTop: 8, marginLeft: 10, marginBottom: 10 }}>
           {" "}
-          Withdraw{" "}
+          <b>Remove Liquidity</b>{" "}
         </div>
 
-        <input className="asset" type="number" />
-        <div className="selectAsset1">LP Tokens</div>
+        <input placeholder="amount" className="asset" type="number" /> <Dropdown/>
+        <div style={{margin:10}}>
+    Network: <b>Arbitrum</b>
+    <img className="tokenIcon" src="https://www.tally.xyz/_next/image?url=https%3A%2F%2Fstatic.tally.xyz%2F51cc280c-b992-4f5c-8190-d5aabd1f82c9_original.png&w=384&q=75" />
 
-        <button className="swapButton"> Withdraw </button>
+</div>
+        
+
+        <button style={{margin:10}} className="swapButton"> Withdraw </button>
+        <div style={{margin:10}}>⚠️ Your redeemed assets may come from multiple networks</div>
       </div>
     </>
   );
@@ -116,29 +133,30 @@ export function DAIUSDCWithdraw() {
 export function PoolData() {
   return (
     <>
-      <div className="swapBox" style={{ height: 300 }}>
+      <div className="swapBox" style={{ height: 350 }}>
         <div style={{ marginTop: 8, marginLeft: 10, marginBottom: 10 }}>
-          <h4> Contracts </h4>
+          <h3> <b>Contracts</b> </h3>
           <table>
             <tr>
               <td style={{ paddingLeft: 0 }} align="left">
-                Pool
+                Arbitrum Pool
               </td>
               <td style={{ paddingLeft: 0 }} align="right">
-                -
+              <img style={{width:15,height:15}}src="https://i.ibb.co/4Y2ZLmY/external-link-1.png"/>
               </td>
             </tr>
 
             <tr>
               <td style={{ paddingLeft: 0 }} align="left">
-                Token
+                Avalanche Pool
               </td>
               <td style={{ paddingLeft: 0 }} align="right">
-                -
+              <img style={{width:15,height:15}}src="https://i.ibb.co/4Y2ZLmY/external-link-1.png"/>
               </td>
             </tr>
           </table>
-          <h4> Currency reserves </h4>
+          <h4> <b>Currency reserves</b> </h4>
+          <h3>Arbitrum</h3>
           <table>
             <tr>
               <td style={{ paddingLeft: 0 }} align="left">
@@ -159,7 +177,35 @@ export function PoolData() {
             </tr>
             <tr>
               <td style={{ paddingLeft: 0 }} align="left">
-                USD total
+                USDT
+              </td>
+              <td style={{ paddingLeft: 0 }} align="right">
+                -
+              </td>
+            </tr>
+          </table>
+          <h3>Avalanche</h3>
+          <table>
+            <tr>
+              <td style={{ paddingLeft: 0 }} align="left">
+                DAI
+              </td>
+              <td style={{ paddingLeft: 0 }} align="right">
+                -
+              </td>
+            </tr>
+
+            <tr>
+              <td style={{ paddingLeft: 0 }} align="left">
+                USDC
+              </td>
+              <td style={{ paddingLeft: 0 }} align="right">
+                -
+              </td>
+            </tr>
+            <tr>
+              <td style={{ paddingLeft: 0 }} align="left">
+                USDT
               </td>
               <td style={{ paddingLeft: 0 }} align="right">
                 -
@@ -180,26 +226,26 @@ export const LIONBRIDGEMODAL = () => {
 
   return (
     <div className="tab-container">
-      <h2> Stablecoin Strudel </h2>
+      <h2>  </h2>
       <div className="tab-buttons">
         <button
           style={{}}
           className={activeTab === 1 ? "active" : "inactive"}
           onClick={() => handleTabClick(1)}
         >
-          Swap
+          Bridge
         </button>
         <button
           className={activeTab === 2 ? "active" : "inactive"}
           onClick={() => handleTabClick(2)}
         >
-          Deposit
+          Add 
         </button>
         <button
           className={activeTab === 3 ? "active" : "inactive"}
           onClick={() => handleTabClick(3)}
         >
-          Withdraw
+          Remove 
         </button>
       </div>
       <br />
@@ -213,3 +259,26 @@ export const LIONBRIDGEMODAL = () => {
     </div>
   );
 };
+
+
+function Dropdown() {
+    const [selectedOption, setSelectedOption] = useState("Asset");
+    const options = ["USDC", "DAI", "USDT"];
+  
+    const handleOptionClick = (option) => {
+      setSelectedOption(option);
+    };
+  
+    return (
+      <div className="dropdown">
+        <button>{selectedOption}</button>
+        <div className="dropdown-content">
+          {options.map((option) => (
+            <a key={option} href="#" onClick={() => handleOptionClick(option)}>
+              {option}
+            </a>
+          ))}
+        </div>
+      </div>
+    );
+  }
